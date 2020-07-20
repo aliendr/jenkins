@@ -1,0 +1,11 @@
+version: '3'
+services:
+  proxy:
+    build: ./nginx
+    environment:
+      - "TARGET_IP=10.100.9.189"
+      - "TARGET_PORT=8888"
+      - "HOST_PORT=14888"
+    ports:
+      - 14888:14888
+
